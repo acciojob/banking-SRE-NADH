@@ -4,6 +4,22 @@ public class SavingsAccount extends BankAccount{
     double rate;
     double maxWithdrawalLimit;
 
+    public double getRate() {
+        return rate;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+
+    public double getMaxWithdrawalLimit() {
+        return maxWithdrawalLimit;
+    }
+
+    public void setMaxWithdrawalLimit(double maxWithdrawalLimit) {
+        this.maxWithdrawalLimit = maxWithdrawalLimit;
+    }
+
     private int limit;
     public SavingsAccount(String name, double balance, double maxWithdrawalLimit, double rate) {
         super(name,balance,0);
@@ -43,7 +59,5 @@ public class SavingsAccount extends BankAccount{
     public double getCompoundInterest(int times, int years){
         return super.getBalance()*Math.pow(1+rate/times,times*years);
         // Return the final amount considering that bank gives compound interest on current amount given times per year
-
     }
-
 }
