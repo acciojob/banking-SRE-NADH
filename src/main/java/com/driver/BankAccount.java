@@ -46,7 +46,7 @@ public class BankAccount {
     }
 
     public void withdraw(double amount) throws Exception {
-        if(balanceg-amount<minBalance){
+        if(balance-amount<minBalance){
             throw new Exception("Insufficient Balance");
         }
         balance-=amount;
